@@ -8,9 +8,12 @@ android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
 
+    buildFeatures {
+        dataBinding true
+    }
     defaultConfig {
         applicationId "com.example.rayakavosh_task"
-        minSdkVersion 19
+        minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -47,17 +50,19 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-    //Room Persistence Library
-    implementation "androidx.room:room-runtime:$room_version"
-    implementation 'androidx.fragment:fragment-ktx:1.3.0-beta02'
-    kapt "androidx.room:room-compiler:$room_version"
-    // optional - Kotlin Extensions and Coroutines support for Room
-    implementation "androidx.room:room-ktx:$room_version"
+//    implementation "org.jetbrains.kotlin:kotlin-reflect:1.4.21"
+
+//    //Room Persistence Library
+//    implementation "androidx.room:room-runtime:$room_version"
+//    implementation 'androidx.fragment:fragment-ktx:1.3.0-beta02'
+//    kapt "androidx.room:room-compiler:$room_version"
+//    // optional - Kotlin Extensions and Coroutines support for Room
+//    implementation "androidx.room:room-ktx:$room_version"
 
     //Moshi
     implementation "com.squareup.moshi:moshi-kotlin:$moshi_version"
     implementation "com.squareup.moshi:moshi-adapters:$moshi_version"
-    implementation "com.squareup.retrofit2:converter-moshi:2.9.0"
+    implementation "com.squareup.retrofit2:converter-moshi:2.4.0"
     implementation "com.squareup.moshi:moshi:$moshi_version"
     kapt "com.squareup.moshi:moshi-kotlin-codegen:$moshi_version"
 
@@ -75,14 +80,6 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     kapt 'com.github.bumptech.glide:compiler:4.11.0'
 
-    // Retrofit
-
-    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
-    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
-    implementation 'com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2'
-
-    //okhttp
-    implementation 'com.squareup.okhttp3:logging-interceptor:4.4.0'
 
     //Hilt
     implementation "com.google.dagger:hilt-android:2.28-alpha"

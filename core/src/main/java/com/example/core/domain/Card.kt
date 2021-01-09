@@ -2,13 +2,12 @@ package com.example.core.domain
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
-import java.io.Serializable
 
 /**
  * a model class for deserializing card types data
  */
 @JsonClass(generateAdapter = true)
-sealed class Card(
+sealed class Card constructor(
         @Json (name = "code")
         val code: CodeType
 ) {

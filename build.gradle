@@ -2,16 +2,13 @@
 buildscript {
     ext.kotlin_version = "1.4.21"
     repositories {
-
-        maven {
-            url 'https://maven.google.com/'
-            name 'Google'
-        }
-        jcenter()
+        mavenCentral()
         google()
+        jcenter()
+//        maven { url "https://maven.google.com" }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.2.0-beta03'
+        classpath "com.android.tools.build:gradle:4.2.0-beta03"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath 'com.google.dagger:hilt-android-gradle-plugin:2.28-alpha'
 
@@ -23,9 +20,10 @@ buildscript {
 allprojects {
     repositories {
         maven {
-            url 'https://maven.google.com/'
             name 'Google'
+            url "https://maven.google.com"
         }
+        mavenCentral()
         google()
         jcenter()
     }
